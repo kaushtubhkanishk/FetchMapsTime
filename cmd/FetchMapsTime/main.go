@@ -23,6 +23,6 @@ func main() {
 			FetchRoutes.SendNotification(log, strconv.FormatInt(globalMin/60, 10)+" : "+strconv.FormatInt(globalMin%60, 10))
 			log.Debug().Int64("min", globalMin).Msg("FetchRoutes.SendNotification")
 		}
-		time.Sleep(30 * time.Second)
+		time.Sleep(2 * time.Minute)
 	}
 }
