@@ -13,6 +13,7 @@ var (
 	user  = os.Getenv("USER_TOKEN")
 )
 
+// SendNotification is a function that sends a notification with a given string
 func SendNotification(log zerolog.Logger, minDuration string) {
 	resp, err := http.PostForm("https://api.pushover.net/1/messages.json", url.Values{
 		"token":   {token},
