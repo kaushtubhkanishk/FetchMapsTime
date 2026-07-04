@@ -15,7 +15,7 @@ func main() {
 	log := zerolog.New(os.Stderr).With().Timestamp().Logger()
 	for {
 		now := time.Now()
-		next7Pm := time.Date(now.Year(), now.Month(), now.Day(), 19, 0, 0, 0, now.Location())
+		next7Pm := time.Date(now.Year(), now.Month(), now.Day(), 16, 0, 0, 0, now.Location())
 		if now.After(next7Pm) {
 			next7Pm = next7Pm.Add(24 * time.Hour)
 		}
