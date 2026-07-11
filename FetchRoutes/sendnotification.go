@@ -8,6 +8,7 @@ import (
 	"github.com/rs/zerolog"
 )
 
+//Use envs to not expose sensitive tokens on the internet
 var (
 	token = os.Getenv("APP_TOKEN")
 	user  = os.Getenv("USER_TOKEN")
